@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Tracking Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .schedule {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .day {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .day:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Boss Tracking Schedule</h1>
+    <div class="schedule" id="schedule">
+        <div class="day"><input type="checkbox" id="day1"> <strong>Day 1</strong>: 20 bosses (47.4 minutes)</div>
+        <div class="day"><input type="checkbox" id="day2"> <strong>Day 2</strong>: 30 bosses (71.1 minutes)</div>
+        <div class="day"><input type="checkbox" id="day3"> <strong>Day 3</strong>: 40 bosses (94.8 minutes)</div>
+        <div class="day"><input type="checkbox" id="day4"> <strong>Day 4</strong>: 30 bosses (71.1 minutes)</div>
+        <div class="day"><input type="checkbox" id="day5"> <strong>Day 5</strong>: Rest or 15 bosses (35.55 minutes)</div>
+        <div class="day"><input type="checkbox" id="day6"> <strong>Day 6</strong>: 50 bosses (118.5 minutes)</div>
+        <div class="day"><input type="checkbox" id="day7"> <strong>Day 7</strong>: 35 bosses (82.95 minutes)</div>
+        <div class="day"><input type="checkbox" id="day8"> <strong>Day 8</strong>: 40 bosses (94.8 minutes)</div>
+        <div class="day"><input type="checkbox" id="day9"> <strong>Day 9</strong>: 45 bosses (106.65 minutes)</div>
+        <div class="day"><input type="checkbox" id="day10"> <strong>Day 10</strong>: 25 bosses (59.25 minutes)</div>
+        <div class="day"><input type="checkbox" id="day11"> <strong>Day 11</strong>: 50 bosses (118.5 minutes)</div>
+        <div class="day"><input type="checkbox" id="day12"> <strong>Day 12</strong>: 20 bosses (47.4 minutes)</div>
+        <div class="day"><input type="checkbox" id="day13"> <strong>Day 13</strong>: 45 bosses (106.65 minutes)</div>
+        <div class="day"><input type="checkbox" id="day14"> <strong>Day 14</strong>: 30 bosses (71.1 minutes)</div>
+        <div class="day"><input type="checkbox" id="day15"> <strong>Day 15</strong>: Rest or 20 bosses (47.4 minutes)</div>
+        <div class="day"><input type="checkbox" id="day16"> <strong>Day 16</strong>: 50 bosses (118.5 minutes)</div>
+        <div class="day"><input type="checkbox" id="day17"> <strong>Day 17</strong>: 35 bosses (82.95 minutes)</div>
+        <div class="day"><input type="checkbox" id="day18"> <strong>Day 18</strong>: 40 bosses (94.8 minutes)</div>
+        <div class="day"><input type="checkbox" id="day19"> <strong>Day 19</strong>: 45 bosses (106.65 minutes)</div>
+        <div class="day"><input type="checkbox" id="day20"> <strong>Day 20</strong>: Rest or 15 bosses (35.55 minutes)</div>
+        <div class="day"><input type="checkbox" id="day21"> <strong>Day 21</strong>: 40 bosses (94.8 minutes)</div>
+        <div class="day"><input type="checkbox" id="day22"> <strong>Day 22</strong>: 30 bosses (71.1 minutes)</div>
+        <div class="day"><input type="checkbox" id="day23"> <strong>Day 23</strong>: 45 bosses (106.65 minutes)</div>
+        <div class="day"><input type="checkbox" id="day24"> <strong>Day 24</strong>: 20 bosses (47.4 minutes)</div>
+        <div class="day"><input type="checkbox" id="day25"> <strong>Day 25</strong>: 30 bosses (71.1 minutes)</div>
+        <div class="day"><input type="checkbox" id="day26"> <strong>Day 26</strong>: 50 bosses (118.5 minutes)</div>
+        <div class="day"><input type="checkbox" id="day27"> <strong>Day 27</strong>: 30 bosses (71.1 minutes)</div>
+        <div class="day"><input type="checkbox" id="day28"> <strong>Day 28</strong>: Rest or 20 bosses (47.4 minutes)</div>
+        <div class="day"><input type="checkbox" id="day29"> <strong>Day 29</strong>: 45 bosses (106.65 minutes)</div>
+        <div class="day"><input type="checkbox" id="day30"> <strong>Day 30</strong>: 25 bosses (59.25 minutes)</div>
+    </div>
+
+    <script>
+        // Load checkbox states from local storage
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            const id = checkbox.id;
+            checkbox.checked = localStorage.getItem(id) === 'true';
+            
+            // Add change event listener to save state
+            checkbox.addEventListener('change', () => {
+                localStorage.setItem(id, checkbox.checked);
+            });
+        });
+    </script>
+
+</body>
+</html>
